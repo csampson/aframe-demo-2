@@ -8,17 +8,21 @@
   <body style='background-color: #0A0A0A;'>
     <a-scene>
       <a-assets>
-        <img id='texture-earth' src='/assets/earth-8k.jpg' />
+        <img id="texture-earth" src='/assets/earth-8k.jpg' />
         <img id='texture-space' src='/assets/space.jpg' />
       </a-assets>
 
-      <a-entity position='0 1.5 -4'>
-        <a-sky src='#texture-space' />
-        <a-sphere src='#texture-earth' radius='2' />
-        <a-light type='ambient' color='lightYellow' intensity='2.5' />
-      </a-entity>
+      <a-sphere src='#texture-earth' position='0 1 -2' radius='1.25'>
+        <a-sphere id='la' color='red' radius='0.02' />
+      </a-sphere>
 
-      <a-light type='point' color='white' intensity='0.5' position='5 10 15' />
+      <a-sky src='#texture-space' />
+
+      <a-light type='ambient' color='white' intensity='2' />
+      <a-light type='directional' color='gold' intensity='1' position='0 5 5' />
+      <a-light type='directional' color='white' intensity='1' position='0 5 5' />
     </a-scene>
+
+    <script src='/dist/bundle.js'></script>
   </body>
 </html>
