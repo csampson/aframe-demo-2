@@ -12,8 +12,7 @@
         <img id='texture-space' src='/assets/space.jpg' />
       </a-assets>
 
-      <a-sphere src='#texture-earth' position='0 1 -2' radius='1.25'>
-        <a-sphere id='la' color='red' radius='0.02' />
+      <a-sphere id='earth' src='#texture-earth' position='0 1 -2' radius='1.25'>
       </a-sphere>
 
       <a-sky src='#texture-space' />
@@ -23,6 +22,6 @@
       <a-light type='directional' color='white' intensity='1' position='0 5 5' />
     </a-scene>
 
-    <script src='/dist/bundle.js'></script>
+    <script src='/dist/bundle.js' type='module'></script>
   </body>
 </html>
