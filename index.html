@@ -5,10 +5,20 @@
     <title>A-Frame</title>
     <script src='/vendor/aframe.js'></script>
   </head>
-  <body>
+  <body style='background-color: #0A0A0A;'>
     <a-scene>
-      <a-sky color='#0A0A0A' />
-      <a-sphere color='blue' radius='2' position='0 1.5 -4' />
+      <a-assets>
+        <img id='texture-earth' src='/assets/earth-8k.jpg' />
+        <img id='texture-space' src='/assets/space.jpg' />
+      </a-assets>
+
+      <a-entity position='0 1.5 -4'>
+        <a-sky src='#texture-space' />
+        <a-sphere src='#texture-earth' radius='2' />
+        <a-light type='ambient' color='lightYellow' intensity='2.5' />
+      </a-entity>
+
+      <a-light type='point' color='white' intensity='0.5' position='5 10 15' />
     </a-scene>
   </body>
 </html>
